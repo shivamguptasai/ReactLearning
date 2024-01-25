@@ -27,7 +27,14 @@
 .App-link {
   color: #61dafb;
 }
-
+.horizonatal-center-row {
+  margin: '200px';
+  /* display: table-cell;
+  vertical-align: middle;
+  justify-content: center;
+    align-items: center; */
+  
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
