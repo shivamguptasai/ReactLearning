@@ -35,6 +35,94 @@
     align-items: center; */
   
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+       body{
+        /* background-color:#545454; */
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+       }
+
+       .container{
+        width: auto;
+        height: auto;
+        background-color:#545454; 
+       
+       }
+
+       .card{
+
+        width: 267px;
+        border: none;
+        border-radius: 15px;
+        padding: 8px;
+        background-color: #fff;
+        position: relative;
+        height: 290;
+       }
+
+       .upper{
+
+        height: 70px;
+
+       }
+
+       .upper img{
+
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+       }
+
+       .user{
+        position: relative;
+       }
+
+       .profile img{
+
+        
+        height: 80px;
+        width: 80px;
+        margin-top:2px;
+
+       
+       }
+
+       .profile{
+
+        position: absolute;
+        top:-50px;
+        left: 38%;
+        height: 90px;
+        width: 90px;
+        border:3px solid #fff;
+
+        border-radius: 50%;
+
+       }
+
+       .follow{
+
+        border-radius: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 35px;
+       }
+
+       .stats span{
+color: white;
+        font-size: 20px;
+       }
+       h4{
+        color: white;
+                font-size: 20px;
+               }
+               span{
+                color: white;
+                        
+                       }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
