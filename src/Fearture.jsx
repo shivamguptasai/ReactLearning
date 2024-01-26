@@ -1,6 +1,8 @@
 import {React ,useState,useEffect} from 'react';
 import axios from "axios";
 import json from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Feature() {
@@ -10,8 +12,14 @@ function Feature() {
     axios.get('https://jsonplaceholder.typicode.com/photos'
     )
     .then((response)=>{
+      if(response.data.length>0)
+      {
       setData(response.data);
      // alert(response.data);;
+    }
+    else{
+      toast.error('Something went wrong!')
+    }
     })
     .catch((error)=>{
       alert(error);
@@ -38,6 +46,10 @@ function Feature() {
     ))}
     </div>
     </div>
+    <ToastContainer 
+  position="top-center"
+  reverseOrder={false}
+  />
     </>
   );
 }

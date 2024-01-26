@@ -7,6 +7,7 @@ import Home from './Home';
 import Feature from './Fearture';
 import About from './AboutUs';
 import Contact from './ContactUs';
+import Login from './login';
 import {Switch, Route,Redirect} from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <Route exact path="/about" component={About}/>
     <Route exact path="/feature" component={Feature}/>
     <Route exact path="/contact" component={Contact}/>
+    <Route exact path="/login" component={Login}/>
     <Redirect to ="./"/>
     <Home/>
     </Switch>

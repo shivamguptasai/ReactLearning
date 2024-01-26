@@ -23,6 +23,7 @@ function Navbar() {
         <NavLink className="nav-link" to="./feature">Features</NavLink>
         <NavLink className="nav-link" to="./about">About Us</NavLink>
         <NavLink className="nav-link" to="./contact">Contact Us</NavLink>
+        <NavLink className="nav-link" to="./login">Login</NavLink>
         </div>
       </div>
     </div>

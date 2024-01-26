@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import Images from './Images/2.png';
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ContactUs() {
  const [data,setData]=useState(
@@ -24,22 +26,35 @@ return{
 };
   const fromSubmit=(e)=>{
 e.preventDefault();
-alert('You Name is '+data.name);
+//alert('You Name is '+data.name);
 const name=data.name;
 const email=data.email;
 const mobile=data.mobile;
 const message=data.message;
+if(name )
+{
 axios.post('https://jsonplaceholder.typicode.com/posts'
 ,{name,email,mobile,message
   })
 .then((response)=>{
-  alert(response.status);
+  if(response.status)
+  {
+    toast.success('Successfully Posted Data To API!')
+  }
+  else{
+    toast.error('Something went wrong!')
+  }
+  //alert(response.status);
 })
 .catch((error)=>{
   alert(error);
 })
-
+}
+else{
+  toast.error('Name are Required!')
+}
   };
+
   return (
     <>
 
@@ -118,6 +133,10 @@ axios.post('https://jsonplaceholder.typicode.com/posts'
       </div>
     </div>
     </section>
+    <ToastContainer 
+  position="top-center"
+  reverseOrder={false}
+/>
     </>
 
   );

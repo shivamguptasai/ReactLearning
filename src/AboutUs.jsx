@@ -1,5 +1,8 @@
 import {React ,useState,useEffect} from 'react';
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function AboutUs() {
@@ -9,8 +12,14 @@ function AboutUs() {
     axios.get('https://api.github.com/users'
     )
     .then((response)=>{
+      if(response.data.length>0)
+      {
       setData(response.data);
      // alert(response.data);;
+      }
+      else{
+        toast.error('Something went wrong!')
+      }
     })
     .catch((error)=>{
       alert(error);
@@ -57,6 +66,10 @@ function AboutUs() {
            ))}
            </div>
            </div>
+           <ToastContainer 
+  position="top-center"
+  reverseOrder={false}
+  />
     </>
   );
 }
